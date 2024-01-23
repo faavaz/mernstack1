@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Facebook</title>
+
+    <link href="fb.css"  type="text/css" rel="stylesheet">
+</head>
+<body>
+    <div class="back">
+        <div class="face">
+            <h1>facebook</h1>
+        </div>
+        <div class="tabl">
+            <table>
+            <tr>
+                <td><label>Email</label></td>
+                <td><label>password</label></td>
+            </tr>
+            <tr>
+                <td>
+                    <form><input type="text" name=""></form>
+                </td>
+                <td>
+                    <form><input type="password" name=""></form>
+                </td> 
+                <td>
+                    <button type="submit">login</button>
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><a href="">Forgetten password</a></td>
+                </tr>
+            </table>
+            
+        </div>
+    </div>
+    <div class="container">
+        <img src="loginpage.png"class="img">
+        <div class="a"><b>Facebook Helps you to Connect and Share with the <br>People in your life.</b></div>
+        <div class="sign"><h2><b>Sign Up</b></h2><br>
+           
+        </div>
+       <div class="n"><b>It's free and anyone can join</b> </div> 
+
+       <div class="form">
+        <form>
+            <label><b>First Name</b></label>
+            <input type="text" ><br>
+            <br>
+            <label><b>Last Name</b></label>
+            <input type="text" >
+            <br><br>
+            <label><b> Email    </b></label>
+            <input type="text" ><br>
+            <br>
+            <label><b>New password</b>
+            </label><label style="display: none;" id="text">enter minimum 8 charcter</label>
+            <input type="password" id="text" name="text"> 
+            <br><br>
+            <label><b>I am</b></label>
+        <select>
+          <option>Select sex</option>
+            <option>Male</option>   
+            <option>Female</option>
+        </select><br><br>
+        
+           
+           <label for="birthday"><b>Birthday:</b></label>
+           <input type="date" id="birthday" name="birthday"><br><br>
+           <div >
+          
+            <label><input type="submit" value="sign up" class="sub"></label>
+           </div>
+
+
+        </form>
+       </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+
+    <script>
+
+
+    $("#text").blur(function()
+       {
+        var text=$(this).val()
+        if(text.length<8){
+          $("#text").show()
+        }
+       })
+
+    
+
+    </script>
+</body>
+</html>
