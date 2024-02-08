@@ -1,0 +1,126 @@
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Form Validation</title>
+<link href="fb.css"  type="text/css" rel="stylesheet">
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.3/jquery.validate.min.js"></script>
+</head>
+<body>
+ 
+<body>
+    <div class="back">
+        <div class="face">
+            <h1>facebook</h1>
+        </div>
+        <div class="tabl">
+            <table>
+            <tr>
+                <td><label>Email</label></td>
+                <td><label>password</label></td>
+            </tr>
+            <tr>
+                <td>
+                    <form><input type="text" name=""></form>
+                </td>
+                <td>
+                    <form><input type="password" name=""></form>
+                </td> 
+                <td>
+                    <button type="submit">login</button>
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><a href="">Forgetten password</a></td>
+                </tr>
+            </table>
+            
+        </div>
+    </div>
+    <div class="container">
+        <img src="loginpage.png"class="img">
+        <div class="a"><b>Facebook Helps you to Connect and Share with the <br>People in your life.</b></div>
+        <div class="sign"><h2><b>Sign Up</b></h2><br>
+           
+        </div>
+       <div class="n"><b>It's free and anyone can join</b> </div> 
+<body>
+
+    <div class="form">
+        <form id="registrationForm">
+            &nbsp;&nbsp; <label><b>First Name</b></label>
+            <input type="text" name="first_name"><br><br>
+            
+            <div class="ln">
+                <label><b>Last Name</b></label>
+                <input type="text" name="last_name"><br><br>
+            </div>
+            
+            <label><b>Email</b></label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <input type="text" name="email"><br><br>
+            
+            &nbsp;&nbsp;<label><b>New Password</b></label>
+            <input type="password" name="password"><br><br>
+            
+            &nbsp;&nbsp;<label><b>I am</b></label>
+            <select name="gender">
+                <option value="">Select sex</option>
+                <option value="male">Male</option>   
+                <option value="female">Female</option>
+            </select><br><br>
+            
+            <label for="birthday"><b>Birthday:</b></label>
+            <input type="date" id="birthday" name="birthday"><br><br>
+            
+            <div>
+                <input type="submit" value="Sign Up" class="sub">
+            </div>
+        </form>
+    <script>
+        $(document).ready(function() {
+            $('#registrationForm').validate({
+                rules: {
+                    first_name: {
+                        required: true
+                    },
+                    last_name: {
+                        required: true
+                    },
+                    email: {
+                        required: true,
+                        email: true
+                    },
+                    password: {
+                        required: true,
+                        minlength: 8 // Minimum length of 8 characters
+                    },
+                    gender: {
+                        required: true
+                    },
+                    birthday: {
+                        required: true
+                    }
+                },
+                messages: {
+                
+                    first_name: "Please enter your first name",
+                    last_name: "Please enter your last name",
+                    email: {
+                        required: "Please enter your email address",
+                        email: "Please enter a valid email address"
+                    },
+                    password: {
+                        required: "Please enter a password",
+                        minlength: "Password must be at least 8 characters long"
+                    },
+                    gender: "Please select your gender",
+                    birthday: "Please enter your birthday"
+                }
+            });
+        });
+    </script>
+    
+</body>
+</html>        
